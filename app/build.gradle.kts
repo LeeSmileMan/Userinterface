@@ -30,11 +30,21 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    packaging {
+        resources {
+            merges.add("META-INF/CONTRIBUTORS.md")
+            merges.add("META-INF/LICENSE.md")
+            merges.add("META-INF/NOTICE.md")
+        }
+    }
 }
 
 dependencies {
+    implementation(libs.activity.ktx)
     implementation(libs.appcompat)
+    implementation(libs.constraintlayout)
     implementation(libs.material)
+    implementation("com.atilika.kuromoji:kuromoji-ipadic:0.9.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
