@@ -8,14 +8,17 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public final class JapaneseWordSplitter {
+
 
 
     private Tokenizer tokenizer;
 
     public static final class Word {
-        public final String baseForm;       // 기본형
-        public final String partOfSpeech;   // 품사
+        public final String baseForm;
+        public final String partOfSpeech;
+
 
         public Word(
                 String baseForm,
